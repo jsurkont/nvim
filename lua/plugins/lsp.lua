@@ -6,13 +6,16 @@ return {
       return {
         sources = {
           nls.builtins.diagnostics.ruff,
+          nls.builtins.diagnostics.shellcheck,
           nls.builtins.formatting.black,
           nls.builtins.formatting.isort,
           nls.builtins.formatting.markdownlint,
           nls.builtins.formatting.prettierd,
           nls.builtins.formatting.ruff,
           nls.builtins.formatting.rustfmt,
-          nls.builtins.formatting.shfmt,
+          nls.builtins.formatting.shfmt.with({
+            extra_args = { "--indent", "2", "--case-indent" },
+          }),
           nls.builtins.formatting.stylua,
           nls.builtins.formatting.taplo,
         },
