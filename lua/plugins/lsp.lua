@@ -8,7 +8,6 @@ return {
           nls.builtins.diagnostics.ruff,
           nls.builtins.diagnostics.shellcheck,
           nls.builtins.formatting.black,
-          nls.builtins.formatting.isort,
           nls.builtins.formatting.markdownlint,
           nls.builtins.formatting.prettierd,
           nls.builtins.formatting.ruff,
@@ -27,7 +26,6 @@ return {
     opts = {
       ensure_installed = {
         "black",
-        "isort",
         "markdownlint",
         "prettierd",
         "ruff",
