@@ -32,6 +32,7 @@ return {
         "rust-analyzer",
         "shellcheck",
         "shfmt",
+        "svelte-language-server",
         "stylua",
         "taplo",
       },
@@ -45,4 +46,5 @@ return {
       },
     },
   },
+  { "evanleck/vim-svelte", branch = "main" },
 }
