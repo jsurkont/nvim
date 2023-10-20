@@ -1,39 +1,48 @@
 return {
   {
-    "nvimtools/none-ls.nvim",
-    opts = function()
-      local nls = require("null-ls")
-      return {
-        sources = {
-          nls.builtins.diagnostics.ruff,
-          nls.builtins.diagnostics.shellcheck,
-          nls.builtins.formatting.black,
-          nls.builtins.formatting.markdownlint,
-          nls.builtins.formatting.prettierd,
-          nls.builtins.formatting.ruff,
-          nls.builtins.formatting.rustfmt,
-          nls.builtins.formatting.shfmt.with({
-            extra_args = { "--indent", "2", "--case-indent" },
-          }),
-          nls.builtins.formatting.stylua,
-          nls.builtins.formatting.taplo,
+    "stevearc/conform.nvim",
+    opts = {
+      formatters_by_ft = {
+        css = { "prettierd" },
+        html = { "prettierd" },
+        javascript = { "prettierd" },
+        json = { "prettierd" },
+        lua = { "stylua" },
+        markdown = { "prettierd" },
+        python = { "isort", "black" },
+        sh = { "shfmt" },
+        typescript = { "prettierd" },
+      },
+      formatters = {
+        shfmt = {
+          prepend_args = { "--indent", "2", "--case-indent" },
         },
-      }
-    end,
+      },
+    },
+  },
+  {
+    "mfussenegger/nvim-lint",
+    opts = {
+      linters_by_ft = {
+        python = { "ruff" },
+        sh = { "shellcheck" },
+      },
+    },
   },
   {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
         "black",
+        "isort",
         "markdownlint",
         "prettierd",
         "ruff",
         "rust-analyzer",
         "shellcheck",
         "shfmt",
-        "svelte-language-server",
         "stylua",
+        "svelte-language-server",
         "taplo",
       },
     },
