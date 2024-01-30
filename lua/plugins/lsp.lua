@@ -9,7 +9,7 @@ return {
         json = { "prettierd" },
         lua = { "stylua" },
         markdown = { "prettierd" },
-        python = { "isort", "black" },
+        python = { "ruff_format" },
         sh = { "shfmt" },
         typescript = { "prettierd" },
       },
@@ -33,7 +33,6 @@ return {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
-        "black",
         "isort",
         "markdownlint",
         "prettierd",
