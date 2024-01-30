@@ -12,6 +12,7 @@ return {
         python = { "ruff_format" },
         sh = { "shfmt" },
         typescript = { "prettierd" },
+        yaml = { "prettierd" },
       },
       formatters = {
         shfmt = {
