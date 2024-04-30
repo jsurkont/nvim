@@ -34,7 +34,6 @@ return {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
-        "isort",
         "markdownlint",
         "prettierd",
         "ruff",
