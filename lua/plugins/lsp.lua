@@ -8,8 +8,6 @@ return {
         javascript = { "prettierd" },
         json = { "prettierd" },
         lua = { "stylua" },
-        markdown = { "prettierd" },
-        python = { "ruff_format" },
         sh = { "shfmt" },
         typescript = { "prettierd" },
         yaml = { "prettierd" },
@@ -34,14 +32,11 @@ return {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
-        "markdownlint",
         "prettierd",
-        "ruff",
         "rust-analyzer",
         "shellcheck",
         "shfmt",
         "stylua",
-        "svelte-language-server",
         "taplo",
       },
     },
@@ -50,10 +45,6 @@ return {
     "nvim-lspconfig",
     opts = {
       inlay_hints = { enabled = false },
-      servers = {
-        pyright = {},
-      },
     },
   },
-  { "evanleck/vim-svelte", branch = "main" },
 }
