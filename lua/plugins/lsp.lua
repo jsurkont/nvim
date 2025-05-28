@@ -7,6 +7,7 @@ return {
         html = { "prettierd" },
         javascript = { "prettierd" },
         json = { "prettierd" },
+        json5 = { "prettierd" },
         lua = { "stylua" },
         sh = { "shfmt" },
         typescript = { "prettierd" },
