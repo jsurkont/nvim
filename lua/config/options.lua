@@ -1,3 +1,2 @@
-local opt = vim.opt
-
-opt.conceallevel = 0
+vim.opt.conceallevel = 0
+vim.g.snacks_animate = false
