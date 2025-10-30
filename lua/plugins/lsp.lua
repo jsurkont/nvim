@@ -24,21 +24,7 @@ return {
     "mfussenegger/nvim-lint",
     opts = {
       linters_by_ft = {
-        -- python = { "ruff" },
         sh = { "shellcheck" },
-      },
-    },
-  },
-  {
-    "williamboman/mason.nvim",
-    opts = {
-      ensure_installed = {
-        "prettierd",
-        "rust-analyzer",
-        "shellcheck",
-        "shfmt",
-        "stylua",
-        "taplo",
       },
     },
   },
